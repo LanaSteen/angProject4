@@ -1,1 +1,13 @@
 <p>home works!</p>
+<button class="btn btn-primary">Show</button>
+
+
+
+<div class="card" style="width: 18rem;" *ngFor="let el of hotelArr">
+    <img [src]="el.featuredImage" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{el.name}}</h5>
+      <p class="card-text">{{el.address}}</p>
+      <a routerLink="/details/{{el.id}}" class="btn btn-primary">See More</a>
+    </div>
+  </div>
