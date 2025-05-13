@@ -17,7 +17,7 @@ export class DetailsComponent {
     })
   }
 
-  hotelId = 0
+  hotelId! :number
   singleHotl : any 
   ngOnInit(){
     this.api.getById(this.hotelId).subscribe(resp => {

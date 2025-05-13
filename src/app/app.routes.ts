@@ -3,6 +3,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ErrorComponent } from './error/error.component';
 import { DetailsComponent } from './details/details.component';
+import { createComponent } from '@angular/core';
+import { BasketComponent } from './basket/basket.component';
 
 export const routes: Routes = [
 
@@ -10,5 +12,6 @@ export const routes: Routes = [
     {path: "home", component: HomeComponent},
     {path: "about", component: AboutComponent},
     {path: "details/:id", component: DetailsComponent},
+    {path: "basket", component: BasketComponent},
     {path: "**", component: ErrorComponent}
 ];

@@ -1,7 +1,8 @@
 <p>home works!</p>
 <button class="btn btn-primary">Show</button>
 
-
+<app-button [text]="buttonTExt"></app-button>
+<app-button [text]="'show'"></app-button>
 
 <div class="card" style="width: 18rem;" *ngFor="let el of hotelArr">
     <img [src]="el.featuredImage" class="card-img-top" alt="...">

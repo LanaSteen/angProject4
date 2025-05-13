@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Cart } from '../models/cart';
 
 @Injectable({
   providedIn: 'root'
@@ -16,4 +17,16 @@ export class ApiService {
     return this.http.get(`https://hotelbooking.stepprojects.ge/api/Hotels/GetHotel/${id}`)
   }
 
+
+  addToCart(postObj123 : Cart){
+      return this.http.post('https://restaurant.stepprojects.ge/api/Baskets/AddToBasket', postObj123)
+  }
+
+  updateCart(obj : any){
+  return this.http.put('https://restaurant.stepprojects.ge/api/Baskets/AddToBasket', obj)
+  }
+
+  deletCart(id :number){
+    return this.http.delete(`https://restaurant.stepprojects.ge/api/Baskets/DeleteProduct/${id}`)
+  }
 }
