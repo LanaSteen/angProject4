@@ -16,7 +16,17 @@ export class ApiService {
   getById(id : number){
     return this.http.get(`https://hotelbooking.stepprojects.ge/api/Hotels/GetHotel/${id}`)
   }
+  
 
+  book(postObj : any){
+    return this.http.post('https://hotelbooking.stepprojects.ge/api/Booking', postObj)
+  }
+
+
+
+   getRoomById(id : number){
+    return this.http.get(`https://hotelbooking.stepprojects.ge/api/Rooms/GetRoom/${id}`)
+  }
 
   addToCart(postObj123 : Cart){
       return this.http.post('https://restaurant.stepprojects.ge/api/Baskets/AddToBasket', postObj123)

@@ -1,0 +1,48 @@
+<p>room-details works!</p>
+
+
+
+
+<main>
+    <div class="left">
+    
+<div class="card" style="width: 18rem;" >
+
+    <div class="card-body">
+      <h5 class="card-title">{{singleRoom.name}}</h5>
+      <p class="card-text">Price Per Night - {{singleRoom.pricePerNight}}</p>
+      <p class="card-text">Max Guests -  {{singleRoom.maximumGuests}}</p>
+
+      
+
+
+    </div>
+
+
+  </div>
+
+
+  <div class="imgParent">
+           <img [src]="img.source" class="card-img-top" alt="..."  *ngFor="let img of singleRoom.images">
+  </div>
+</div>
+
+<div class="rgiht">
+
+    <input type="date" [(ngModel)]="checkInDate">
+    <input type="date" [(ngModel)]="checkOutDate">
+        <input type="text" [(ngModel)]="customerName">
+        <input type="text" [(ngModel)]="customerId">
+        <input type="text" [(ngModel)]="customerPhone">
+        <button (click)="book()" >Book</button>
+      <!-- 
+  "checkInDate": "2025-05-17T12:40:49.812Z",
+  "checkOutDate": "2025-05-17T12:40:49.812Z",
+  "customerName": "string",
+  "customerId": "string",
+  "customerPhone": "string" -->
+
+
+    
+</div>
+</main>

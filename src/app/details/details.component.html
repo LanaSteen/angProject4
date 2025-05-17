@@ -4,6 +4,29 @@
     <div class="card-body">
       <h5 class="card-title">{{singleHotl.name}}</h5>
       <p class="card-text">{{singleHotl.address}}</p>
-      <!-- <a routerLink="/details/{{singleHotl.id}}" class="btn btn-primary">See More</a> -->
+
+
     </div>
+
+
   </div>
+
+
+
+ <div class="roopParent">
+     <div class="card" style="width: 18rem;"    *ngFor="let room of singleHotl.rooms" >
+      
+         <div class="card-body">
+           <h5 class="card-title">{{room.maximumGuests}}</h5>
+           <p class="card-text">{{room.name}}</p>
+           <p class="card-text">{{room.pricePerNight}}</p>
+      
+
+          </div>
+
+           <div class="imgParent">
+                <img [src]="room.images[0].source" class="card-img-top" alt="..."  >
+           </div>
+           <button routerLink="/roomDetails/{{room.id}}">See Room</button>
+      </div>
+ </div> 

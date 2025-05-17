@@ -5,6 +5,7 @@ import { ErrorComponent } from './error/error.component';
 import { DetailsComponent } from './details/details.component';
 import { createComponent } from '@angular/core';
 import { BasketComponent } from './basket/basket.component';
+import { RoomDetailsComponent } from './room-details/room-details.component';
 
 export const routes: Routes = [
 
@@ -12,6 +13,7 @@ export const routes: Routes = [
     {path: "home", component: HomeComponent},
     {path: "about", component: AboutComponent},
     {path: "details/:id", component: DetailsComponent},
+    {path: "roomDetails/:id", component: RoomDetailsComponent},
     {path: "basket", component: BasketComponent},
     {path: "**", component: ErrorComponent}
 ];
