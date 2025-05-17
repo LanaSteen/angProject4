@@ -1,0 +1,22 @@
+<p>menu works!</p>
+
+
+
+
+<div class="card" style="width: 18rem;" *ngFor="let el of menu">
+    <img [src]="el.product.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{el.product.name}}</h5>
+      <p class="card-text">{{el.product.price}}</p>
+            <p class="card-text">{{el.quantity}}</p>
+
+        <button (click)="increase(el.quantity, el.product.id, el.product.price)">+</button>
+            <button (click)="decriease(el.quantity, el.product.id, el.product.price)">-</button>
+            <button>Delete</button>
+      <!-- <a routerLink="/details/{{el.id}}" class="btn btn-primary">See More</a> -->
+
+
+
+
+    </div>
+  </div>

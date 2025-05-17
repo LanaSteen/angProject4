@@ -39,4 +39,21 @@ export class ApiService {
   deletCart(id :number){
     return this.http.delete(`https://restaurant.stepprojects.ge/api/Baskets/DeleteProduct/${id}`)
   }
+
+  getAllMenu(){
+    return this.http.get(`https://restaurant.stepprojects.ge/api/Baskets/GetAll`)
+       
+  }
+
+  update2Cart(postObj : any){
+    return this.http.put('https://restaurant.stepprojects.ge/api/Baskets/UpdateBasket', postObj)
+  }
+
+  registerUser(postObj : any){
+    return this.http.post('https://rentcar.stepprojects.ge/api/Users/register', postObj)
+  }
+
+   logInUser(postObj : any){
+    return this.http.post('https://rentcar.stepprojects.ge/api/Users/login', postObj)
+  }
 }
