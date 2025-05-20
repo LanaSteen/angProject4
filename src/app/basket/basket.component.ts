@@ -33,8 +33,6 @@ export class BasketComponent {
            else{
               this.route.navigateByUrl('/login')
            }
-  
-
     
   }
    

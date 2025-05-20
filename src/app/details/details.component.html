@@ -1,4 +1,17 @@
 <p>details works!</p>
+
+
+
+<input type="date" [(ngModel)]="checkInDate">
+<input type="date" [(ngModel)]="checkOutDate">
+<input type="number" [(ngModel)]="priceFrom">
+<input type="number" [(ngModel)]="priceTo">
+<input type="number" [(ngModel)]="maximumGuests">
+<button (click)="filter()">Filter</button>
+<button (click)="reset()">Reset</button>
+
+
+
 <div class="card" style="width: 18rem;" >
     <img [src]="singleHotl.featuredImage" class="card-img-top" alt="...">
     <div class="card-body">

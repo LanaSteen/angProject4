@@ -56,4 +56,11 @@ export class ApiService {
    logInUser(postObj : any){
     return this.http.post('https://rentcar.stepprojects.ge/api/Users/login', postObj)
   }
+
+
+  filterRoom(filterPosttObj : any){
+
+    return this.http.post("https://hotelbooking.stepprojects.ge/api/Rooms/GetFiltered", filterPosttObj)
+
+  }
 }
