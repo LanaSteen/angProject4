@@ -10,8 +10,9 @@
         <li><a routerLink="">Services</a></li>
         <li><a routerLink="">Contact</a></li>
                 <li><a routerLink="/basket">Basket</a></li>
-         <li><a routerLink="/register">Register</a></li>
-                  <li><a routerLink="/login">Log In</a></li>
+         <li  *ngIf="!isAuth"><a routerLink="/register">Register</a></li>
+         <li  *ngIf="!isAuth" ><a routerLink="/login">Log In</a></li>
+         <li   *ngIf="isAuth" > <button (click)="logOut()">Log Out</button></li>
         <app-button [text]="'Log In'" routerLink="/home" (userNFromChild)="getUerName($event)"></app-button>
 
 

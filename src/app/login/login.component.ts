@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { FormsModule } from '@angular/forms';
+import { SignalService } from '../services/signal.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class LoginComponent {
 
-    constructor(private api :ApiService){}
+    constructor(private api :ApiService, private sig : SignalService){}
      
     phoneNumber = ""
     password = ""
@@ -28,6 +29,7 @@ export class LoginComponent {
        }).subscribe((resp: any) => {
         console.log(resp.token)
         localStorage.setItem("token", resp.token)
+        this.sig.logIn()
        })
     }
   
